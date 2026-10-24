@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#fff8f1">
+<title>Tulip Flower Shop — Invitation</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="cover-page">
+<main class="invitation" aria-label="Tulip Flower Shop invitation cover">
+  <img class="artwork" src="cover.gif" alt="Tulip Flower Shop invitation with rare flowers and butterflies">
+  <a class="cover-open hit-area" href="page2.html" aria-label="Open invitation"></a>
+</main>
+
+<audio id="invitationMusic" src="music.mp3" autoplay loop preload="auto"></audio>
+<script>
+(function () {
+  const music = document.getElementById('invitationMusic');
+  music.volume = 0.8;
+  const tryPlay = () => music.play().catch(() => {});
+  tryPlay();
+  document.addEventListener('pointerdown', tryPlay, { once: true });
+  document.addEventListener('keydown', tryPlay, { once: true });
+})();
+</script>
+
+</body>
+</html>

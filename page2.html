@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#fff8f1">
+<title>Tulip Flower Shop — Details</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="invitation" aria-label="Tulip Flower Shop invitation details">
+  <img class="artwork" src="page2.gif" alt="Tulip Flower Shop invitation details with rare flowers and butterflies">
+  <a class="back-link" href="index.html" aria-label="Back to invitation cover" title="Back">‹</a>
+  <a class="button-hit location-hit" href="https://www.google.com/maps/search/?api=1&query=Tulip+Flower+Shop" target="_blank" rel="noopener" aria-label="Our location"></a>
+  <a class="button-hit call-hit" href="https://www.google.com/search?q=Tulip+Flower+Shop+contact+phone+number" target="_blank" rel="noopener" aria-label="Find Tulip Flower Shop phone number"></a>
+  <button class="button-hit share-hit" id="shareButton" type="button" aria-label="Share invitation"></button>
+  <button class="button-hit offers-hit" id="offersButton" type="button" aria-label="Special offers"></button>
+  <section class="offers-panel" id="offersPanel" hidden aria-live="polite">
+    <button class="panel-close" id="closeOffers" aria-label="Close offers">×</button>
+    <h1>Special Offers</h1>
+    <p>Discover our rare flowers and seasonal arrangements.</p>
+    <p>Contact Tulip Flower Shop to ask about current offers.</p>
+    <a href="https://www.google.com/search?q=Tulip+Flower+Shop+special+offers" target="_blank" rel="noopener">Explore offers</a>
+  </section>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</main>
+<script src="script.js"></script>
+
+<audio id="invitationMusic" src="music.mp3" autoplay loop preload="auto"></audio>
+<script>
+(function () {
+  const music = document.getElementById('invitationMusic');
+  music.volume = 0.8;
+  const tryPlay = () => music.play().catch(() => {});
+  tryPlay();
+  document.addEventListener('pointerdown', tryPlay, { once: true });
+  document.addEventListener('keydown', tryPlay, { once: true });
+})();
+</script>
+
+</body>
+</html>
